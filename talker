@@ -1,0 +1,820 @@
+@echo off                                     ::this program has bugs
+color 0a
+cls
+set /a counter=0
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= this is a game greated by    saugat tamang. have fun
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                                                                           :: requests age of user
+echo this is a game created by saugat tamang.
+pause
+:menu                                                                              ::asks if you wish to play
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=Hello!!.   do you want to play?     yes or no.
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo hello, do you want to play?(y/n)
+set gamemode=menu
+set /p play=
+
+if %play% == yes  goto play 
+if %play% == yes please goto play
+if %play% == Yes  goto play 
+if %play% == Yup  goto play 
+if %play% == YUP  goto play 
+if %play% == yup  goto play 
+if %play% == y  goto play
+if %play% == Y  goto play 
+if %play% == no  goto exiter 
+if %play% == No  goto exiter
+if %play% == N  goto exiter
+if %play% == n goto exiter
+if not %play% == yes  goto play 
+if not %play% == Yes  goto play 
+if not %play% == Yup  goto play 
+if not %play% == YUP  goto play 
+if not %play% == yup  goto play 
+if not %play% == y  goto play
+if not %play% == Y  goto play 
+if not %play% == no  goto exiter 
+if not %play% == No  goto exiter
+if not %play% == N  goto exiter
+if not %play% == n goto exiter  
+
+:shufflersa
+set /a shuffleb= %random% %%5
+if %shuffleb% == 0 goto hel
+if %shuffleb% == 1 goto hela 
+if %shuffleb% == 2 goto helb
+if %shuffleb% =ha= 3 goto helc
+
+:hel
+( set compgreet=hello)
+goto shufflesb
+
+:hela
+( set compgreet=hi)
+goto shufflesb
+
+:helb
+( set compgreet=whatsup)
+goto shufflesb
+
+:helc
+( set compgreet=yo)
+goto shufflesb
+
+:shufflesb
+set /a shufflea= %random% %%5
+if %shufflea% == 0 goto sit
+if %shufflea% == 1 goto sita
+if %shufflea% == 2 goto sitb
+if %shufflea% == 3 goto sitc
+
+:sit
+( set situationcomp=relief)
+goto chat
+
+:sita
+( set situationcomp=good)
+goto chat
+
+:sitb
+( set situationcomp=great)
+goto chat
+
+:sitc
+( set situationcomp=neverchanged)
+goto chat
+
+: play                                                                              ::asks name of the player for auth
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=what is your name?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo what is your name?
+set /p name=
+
+if %name% == saugat ( goto administrator) else ( goto guest)
+
+:administrator                                                                     ::main account VIP services 
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= Good day!, saugat.
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo good day, Saugat
+pause
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= Here are your options:      first.      chat.             second.      trivia.             third.      exam preparation test           
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo here are your options
+echo a) Chat!
+echo b) Trivia
+echo c) Exam preparation test
+set gamemode=administrator
+set /p adminchoices=
+
+if %adminchoices% == a goto shufflersa
+if %adminchoices% == one goto shufflersa
+if %adminchoices% == One goto shufflersa
+if %adminchoices% == ONE goto shufflersa
+if %adminchoices% == chat goto shufflersa
+if %adminchoices% == Chat goto shufflersa
+if %adminchoices% == CHAT goto shufflersa
+if %adminchoices% == b goto trivia
+if %adminchoices% == two goto trivia
+if %adminchoices% == Two goto trivia
+if %adminchoices% == TWO goto trivia
+if %adminchoices% == trivia goto trivia
+if %adminchoices% == Trivia goto trivia
+if %adminchoices% == TRIVIA goto trivia
+if %adminchoices% == c goto examprep
+if %adminchoices% == three goto examprep
+if %adminchoices% == Three goto examprep
+if %adminchoices% == THREE goto examprep
+if %adminchoices% == examprep goto examprep
+if %adminchoices% == Examprep goto examprep
+if %adminchoices% == EXAMPREP goto examprep
+if %adminchoices% == exampreparationquiz goto examprep
+if %adminchoices% == Exampreparationquiz goto examprep
+if %adminchoices% == ExamPreparation Quiz) goto examprep
+if %adminchoices% == EXAMPREPARATION QUIZ) goto examprep
+if not %adminchoices% == a goto dialogerror
+if not %adminchoices% == one goto dialogerror
+if not %adminchoices% == One goto dialogerror
+if not %adminchoices% == ONE goto dialogerror
+if not %adminchoices% == chat goto dialogerror
+if not %adminchoices% == Chat goto dialogerror
+if not %adminchoices% == CHAT goto dialogerror
+if not %adminchoices% == b goto dialogerror
+if not %adminchoices% == two goto dialogerror
+if not %adminchoices% == Two goto dialogerror
+if not %adminchoices% == TWO goto dialogerror
+if not %adminchoices% == trivia goto dialogerror
+if not %adminchoices% == Trivia goto dialogerror
+if not %adminchoices% == TRIVIA goto dialogerror
+if not %adminchoices% == c goto dialogerror
+if not %adminchoices% == three goto dialogerror
+if not %adminchoices% == Three goto dialogerror
+if not %adminchoices% == THREE goto dialogerror
+if not %adminchoices% == examprep goto dialogerror
+if not %adminchoices% == Examprep goto dialogerror
+if not %adminchoices% == EXAMPREP goto dialogerror
+if not %adminchoices% == exampreparationquiz goto dialogerror
+if not %adminchoices% == Exampreparationquiz goto dialogerror
+if not %adminchoices% == ExamPreparationQuiz goto chat
+if not %adminchoices% == EXAMPREPARATIONQUIZ goto dialogerror
+
+
+:trivia                                                                            ::yet to be implemented
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= welcome to trivia.   shuffling         
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo welcome to trivia. Shuffling---------------
+set gamemode=trivia
+set /a counter= %counter% +1
+set /a shuffle= %random% %%5
+
+if %shuffle% == 0 goto zerothquestion
+if %shuffle% == 1 goto firstquestion
+if %shuffle% == 2 goto secondquestion
+if %shuffle% =ha= 3 goto thirdquestion
+if %shuffle% == 4 goto fourthquestion
+if not %shuffle% == 0 goto dialogerror
+if not %shuffle% == 1 goto dialogerror
+if not %shuffle% == 2 goto dialogerror
+if not %shuffle% == 3 goto dialogerror
+if not %shuffle% == 4 goto dialogerror
+
+
+:zerothquestion
+cls
+echo   ?                                                                              ::question no 1
+echo 1)                                                                               ::option1
+echo 2)                                                                               ::option2
+echo 3)                                                                               ::option3
+echo 4)                                                                               ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:firstquestion
+cls
+echo   ?                                                                              ::question no 2
+echo 1)                                                                               ::option1
+echo 2)                                                                               ::option2
+echo 3)                                                                               ::option3
+echo 4)                                                                               ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:secondquestion
+cls
+echo   ?                                                                              ::question no 3
+echo 1)                                                                               ::option1
+echo 2)                                                                               ::option2
+echo 3)                                                                               ::option3
+echo 4)                                                                               ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:thirdquestion
+cls
+echo   ?                                                                              ::question no 4
+echo 1)                                                                               ::option1
+echo 2)                                                                               ::option2
+echo 3)                                                                               ::option3
+echo 4)                                                                               ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:fourthquestion
+cls
+echo   ?                                                                              ::question no 5
+echo 1)                                                                               ::option1
+echo 2)                                                                               ::option2
+echo 3)                                                                               ::option3
+echo 4)                                                                               ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:examprep   
+@echo off                                                                       ::needs attention now
+set gamemode=examprep
+set gamemode=examprep
+cls
+set /a counter= %counter% +1
+set /a shuffle= %random% %%5
+
+if %shuffle% == 0 goto zerothquestion
+if %shuffle% == 1 goto firstquestion
+if %shuffle% == 2 goto secondquestion
+if %shuffle% == 3 goto thirdquestion
+if %shuffle% == 4 goto fourthquestion
+if not %shuffle% == 0 goto dialogerror
+if not %shuffle% == 1 goto dialogerror
+if not %shuffle% == 2 goto dialogerror
+if not %shuffle% == 3 goto dialogerror
+if not %shuffle% == 4 goto dialogerror
+
+:zerothquestion
+@echo off
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= How many chromosomes are there in a drone and a queen bee?     option a.      four and eight.     option b.      six and tweleve.     option c.      eighteen and thirty two.     option d.   eight and sixteen.             
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                     
+echo  How many chromosomes are there in drone and queenbee?                           ::question no 1
+echo 1) 4 and 8                                                                       ::option1
+echo 2) 6 and 12                                                                      ::option2
+echo 3) 18 and 32                                                                     ::option3
+echo 4) 8 and 16                                                                      ::option4
+echo
+echo Note:drone is unfertilized and queen bee or worker is fertilized
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto right
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:firstquestion
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= what is the value of gravitational constant ?     option a.      6.68 X 10 ^ -11.     option b.      6.022 X 10 ^ 23.     option c.      6.67 X 10 ^ -10.     option d.   6.67 X 10 ^ -11.             
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                     
+echo  what is the value of gravitational constant?                                    ::question no 2
+echo 1) 6.68 X 10 ^ -11                                                               ::option1
+echo 2) 6.022 X 10 ^ 23                                                               ::option2
+echo 3) 6.67 X 10 ^ -10                                                               ::option3
+echo 4) 6.67 X 10 ^ -11                                                                              ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto right
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:secondquestion
+cls
+echo   ?                                                                              ::question no 3
+echo 1)                                                                               ::option1
+echo 2)                                                                               ::option2
+echo 3)                                                                               ::option3
+echo 4)                                                                               ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:thirdquestion
+cls
+echo   ?                                                                              ::question no 4
+echo 1)                                                                               ::option1
+echo 2)                                                                               ::option2
+echo 3)                                                                               ::option3
+echo 4)                                                                               ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:fourthquestion
+cls
+echo   ?                                                                              ::question no 5
+echo 1)                                                                               ::option1
+echo 2)                                                                               ::option2
+echo 3)                                                                               ::option3
+echo 4)                                                                               ::option4
+set /p answer=
+
+if %answer% == 1 goto wrong
+if %answer% == 2 goto wrong
+if %answer% == 3 goto wrong
+if %answer% == 4 goto wrong
+if not %answer% == 1 goto dialogerror
+if not %answer% == 2 goto dialogerror
+if not %answer% == 3 goto dialogerror
+if not %answer% == 4 goto dialogerror
+
+:chat
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= hi %name%.          lets chat.
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+set gamemode= chat
+set /p greet=
+
+if %greet% == hi goto %compgreet%    
+if %greet% == Hi goto %compgreet%  
+if %greet% == HI goto %compgreet%  
+if %greet% == yo goto %compgreet%  
+if %greet% == Yo goto %compgreet%  
+if %greet% == YO goto %compgreet%  
+if %greet% == hello goto %compgreet%  
+if %greet% == Hello goto %compgreet%  
+if %greet% == HELLO goto %compgreet%  
+if %greet% == konnichiwa goto japanese 
+if %greet% == Konnichiwa goto japanese 
+if %greet% == KONNICHIWA goto japanese 
+if %greet% == konichiwa goto japanese 
+if %greet% == Konichiwa goto japanese 
+if %greet% == KONICHIWA goto japanese
+if %greet% == hola goto spanish 
+if %greet% == Hola goto spanish 
+if %greet% == HOLA goto spanish 
+if %greet% == chrome ( start chrome.exe)
+if %greet% == google ( start chrome.exe)
+if %greet% == Chrome ( start chrome.exe)
+if %greet% == CHROME ( start chrome.exe)
+if %greet% == Google ( start chrome.exe)
+if %greet% == GOOGLE ( start chrome.exe)
+if %greet% == openchrome ( start chrome.exe)
+if %greet% == opengoogle ( start chrome.exe)
+if %greet% == OpenChrome ( start chrome.exe)
+if %greet% == OpenCHROME ( start chrome.exe)
+if %greet% == OpenGoogle ( start chrome.exe)
+if %greet% == OpenGOOGLE ( start chrome.exe)
+if not %greet% == hi goto languageinputerror   
+if not %greet% == Hi goto languageinputerror 
+if not %greet% == HI goto languageinputerror 
+if not %greet% == yo goto languageinputerror 
+if not %greet% == Yo goto languageinputerror 
+if not %greet% == YO goto languageinputerror 
+if not %greet% == hello goto languageinputerror 
+if not %greet% == Hello goto languageinputerror 
+if not %greet% == HELLO goto languageinputerror 
+if not %greet% == konnichiwa goto languageinputerror 
+if not %greet% == Konnichiwa goto languageinputerror 
+if not %greet% == KONNICHIWA goto languageinputerror 
+if not %greet% == konichiwa goto languageinputerror 
+if not %greet% == Konichiwa goto languageinputerror 
+if not %greet% == KONICHIWA goto languageinputerror
+if not %greet% == hola goto languageinputerror 
+if not %greet% == Hola goto languageinputerror 
+if not %greet% == HOLA goto languageinputerror
+if not %greet% == chrome dialogerror
+if not %greet% == google dialogerror
+if not %greet% == Chrome dialogerror
+if not %greet% == CHROME dialogerror
+if not %greet% == Google dialogerror
+if not %greet% == GOOGLE dialogerror 
+if not %greet% == openchrome dialogerror
+if not %greet% == opengoogle dialogerror
+if not %greet% == OpenChrome dialogerror
+if not %greet% == OpenCHROME dialogerror
+if not %greet% == OpenGoogle dialogerror
+if not %greet% == OpenGOOGLE dialogerror
+pause 
+
+:hello
+cls
+set game mode= chat
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= hello there.   %name%.            how do you do?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo hello there, %name%. how do you do?
+set /p condition=
+
+if %condition%==good goto %situationcomp%
+if %condition%==verygood goto %situationcomp%
+if %condition%==very good goto %situationcomp%
+if %condition%==very good goto %situationcomp%
+if %condition%==superb goto %situationcomp%
+if %condition%==supergood goto %situationcomp%
+if not %condition%==good goto dialogerror
+if not %condition%==verygood goto dialogerror
+if not %condition%==very good goto dialogerror
+if not %condition%==very good goto dialogerror
+if not %condition%==superb goto dialogerror
+if not %condition%==supergood goto dialogerror
+
+:hi
+cls
+set gamemode= chat
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= hi    %name%.            how have you been?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo hi %name% . how have you been?
+set /p condition=
+
+if %condition%==good goto %situationcomp%
+if %condition%==verygood goto %situationcomp%
+if %condition%==very good goto %situationcomp%
+if %condition%==very good goto %situationcomp%
+if %condition%==superb goto %situationcomp%
+if %condition%==supergood goto %situationcomp%
+if not %condition%==good goto dialogerror
+if not %condition%==verygood goto dialogerror
+if not %condition%==very good goto dialogerror
+if not %condition%==very good goto dialogerror
+if not %condition%==superb goto dialogerror
+if not %condition%==supergood goto dialogerror
+
+:whatsup
+cls
+set gamemode= chat
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=%name%,        whatsup?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo whatsup?
+set /p condition=
+
+if %condition%==good goto %situationcomp%
+if %condition%==verygood goto %situationcomp%
+if %condition%==very good goto %situationcomp%
+if %condition%==very good goto %situationcomp%
+if %condition%==superb goto %situationcomp%
+if %condition%==supergood goto %situationcomp%
+if not %condition%==good goto dialogerror
+if not %condition%==verygood goto dialogerror
+if not %condition%==very good goto dialogerror
+if not %condition%==very good goto dialogerror
+if not %condition%==superb goto dialogerror
+if not %condition%==supergood goto dialogerror
+
+:yo
+cls
+set gamemode= chat
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=yo!   how have you been?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo yo!, how have you been?
+set /p condition=
+
+if %condition%==good goto %situationcomp%
+if %condition%==verygood goto %situationcomp%
+if %condition%==very good goto %situationcomp%
+if %condition%==very good goto %situationcomp%
+if %condition%==superb goto %situationcomp%
+if %condition%==supergood goto %situationcomp%
+if not %condition%==good goto dialogerror
+if not %condition%==verygood goto dialogerror
+if not %condition%==very good goto dialogerror
+if not %condition%==very good goto dialogerror
+if not %condition%==superb goto dialogerror
+if not %condition%==supergood goto dialogerror
+
+:relief
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=that's a relief.    ask me to do something.   
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo thats a relief. ask me to do something.
+goto chat
+
+:good
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=that's good.       ask me to do something.
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo thats good. ask me to do something.
+goto chat
+
+:great
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=that's great.      ask me to do something.
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo thats great. ask me to do something.
+goto chat
+
+:neverchanged
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=good as always.   i see.        ask me to do something.
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+echo i see. ask me to do something.
+goto chat
+
+
+:languageinputerror 
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= the language input '%greet%'isnt available .                    continue in english?          yes    or     no?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                                                                 ::wrong greeting    
+set gamemode=chat
+set /p continue=
+
+if %continue% == yes goto chat
+if %continue% == y goto chat
+if %continue% == Y goto chat
+if %continue% == Yes goto chat
+if %continue% == no goto exiter
+if %continue% == n goto exiter
+if %continue% == N goto exiter
+if %continue% == No goto exiter
+if not %continue% == yes goto dialogerror
+if not %continue% == y goto dialogerror
+if not %continue% == Y goto dialogerror
+if not %continue% == Yes goto dialogerror
+if not %continue% == no goto dialogerror
+if not %continue% == n goto dialogerror
+if not %continue% == N goto dialogerror
+if not %continue% == No goto dialogerror
+
+:japanese                                                                              ::additional language
+set language= japanese
+pause
+goto languageproblem
+
+:spanish                                                                               ::additional language
+set language= spanish
+pause
+goto languageproblem
+
+:languageproblem                                                                        :: total out language
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= the language input '%greet%'isnt available .                    continue in english?          yes    or     no?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs 
+set gamemode=languageproblem
+set /p continue=
+
+if %continue% == yes goto chat
+if %continue% == y goto chat
+if %continue% == Y goto chat
+if %continue% == Yes goto chat
+if %continue% == no goto exiter
+if %continue% == n goto exiter
+if %continue% == N goto exiter
+if %continue% == No goto exiter
+if not %continue% == yes goto dialogerror
+if not %continue% == y goto dialogerror
+if not %continue% == Y goto dialogerror
+if not %continue% == Yes goto dialogerror
+if not %continue% == no goto dialogerror
+if not %continue% == n goto dialogerror
+if not %continue% == N goto dialogerror
+if not %continue% == No goto dialogerror
+
+:guest                                                                                :: normal account no VIP
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= hello newcomer.      %name%.
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs 
+echo Hello newcomer %name%.
+goto agereinput
+
+:agereinput 
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= how old are you?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                                                                           :: requests age of user
+echo how old are you?
+set /p age=
+goto confirm
+
+:confirm      
+cls
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text= you are %age% years old.   is that right?     yes   or   no?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                                                                           :: confirms age of user                                                                        :: confirms age entered         
+echo you are %age% years old. is that right?(y/n)
+set /p continue=
+ 
+if %continue% == yes goto chat
+if %continue% == y goto chat
+if %continue% == Y goto chat
+if %continue% == Yes goto chat
+if %continue% == no goto exiter
+if %continue% == n goto exiter
+if %continue% == N goto exiter
+if %continue% == No goto exiter
+if not %continue% == yes goto dialogerror
+if not %continue% == y goto dialogerror
+if not %continue% == Y goto dialogerror
+if not %continue% == Yes goto dialogerror
+if not %continue% == no goto dialogerror
+if not %continue% == n goto dialogerror
+if not %continue% == N goto dialogerror
+if not %continue% == No goto dialogerror
+
+:dialogerror                                                                            :: dialogue misspell 
+echo off
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=seems that the above mentioned expression  was invalid.     do you wish to continue?   yes   or   no?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                                
+echo seems that the above mentioned expression  was invalid.
+echo do you wish to continue?(y/n)
+set /p continue=
+
+if %continue% == yes goto %gamemode%
+if %continue% == Yes goto %gamemode%
+if %continue% == Y goto %gamemode%
+if %continue% == y goto %gamemode%
+if %continue% == no goto exiter
+if %continue% == No goto exiter
+if %continue% == N goto exiter
+if %continue% == n goto exiter
+if not %continue% == yes goto dialogerror
+if not %continue% == Yes goto dialogerror
+if not %continue% == Y goto dialogerror
+if not %continue% == y goto dialogerror
+if not %continue% == no goto dialogerror
+if not %continue% == No goto dialogerror
+if not %continue% == N goto dialogerror
+if not %continue% == n goto dialogerror
+
+:exiter                                                                                 :: exits the game 
+cls
+exit
+pause
+
+:wrong
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=uh  uh.     that was the wrong answer.          continue?   yes  or  no?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                     
+echo the answer was wrong.
+echo continue?(y/n)
+set /p continue=
+
+if %continue% == yes goto %gamemode%
+if %continue% == y goto %gamemode%
+if %continue% == Y goto %gamemode%
+if %continue% == Yes goto %gamemode%
+if %continue% == no  goto exiter
+if %continue% == n goto exiter
+if %continue% == N goto exiter
+if %continue% == No goto exiter
+if not %continue% == yes goto dialogerror
+if not %continue% == y goto dialogerror
+if not %continue% == Y goto dialogerror
+if not %continue% == Yes goto dialogerror
+if not %continue% == no  goto dialogerror
+if not %continue% == n goto dialogerror
+if not %continue% == N goto dialogerror
+if not %continue% == No goto dialogerror
+
+:right
+del temp.vbs
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=banzai!  .     that was the right answer.       continue?     yes   or   no?
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs                     
+echo the answer was right
+echo continue?(y/n)
+set /p continue=
+
+if %continue% == yes goto %gamemode%
+if %continue% == y goto %gamemode%
+if %continue% == Y goto %gamemode%
+if %continue% == Yes goto %gamemode%
+if %continue% == no  goto exiter
+if %continue% == n goto exiter
+if %continue% == N goto exiter
+if %continue% == No goto exiter
+if not %continue% == yes goto dialogerror
+if not %continue% == y goto dialogerror
+if not %continue% == Y goto dialogerror
+if not %continue% == Yes goto dialogerror
+if not %continue% == no  goto dialogerror
+if not %continue% == n goto dialogerror
+if not %continue% == N goto dialogerror
+if not %continue% == No goto dialogerror
