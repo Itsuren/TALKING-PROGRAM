@@ -1,4 +1,4 @@
-@echo off                                     ::this program has bugs
+@echo off
 color 0a
 cls
 set /a counter=0
@@ -18,34 +18,34 @@ echo speech.speak "%text%" >> "temp.vbs"
 start temp.vbs
 echo hello, do you want to play?(y/n)
 set gamemode=menu
-set /p play=
+set /p plays=
 
-if %play% == yes  goto play 
-if %play% == yes please goto play
-if %play% == Yes  goto play 
-if %play% == Yup  goto play 
-if %play% == YUP  goto play 
-if %play% == yup  goto play 
-if %play% == y  goto play
-if %play% == Y  goto play 
-if %play% == no  goto exiter 
-if %play% == No  goto exiter
-if %play% == N  goto exiter
-if %play% == n goto exiter
-if not %play% == yes  goto play 
-if not %play% == Yes  goto play 
-if not %play% == Yup  goto play 
-if not %play% == YUP  goto play 
-if not %play% == yup  goto play 
-if not %play% == y  goto play
-if not %play% == Y  goto play 
-if not %play% == no  goto exiter 
-if not %play% == No  goto exiter
-if not %play% == N  goto exiter
-if not %play% == n goto exiter  
+if %plays% == yes  goto shufflersa 
+if %plays% == yes please goto shufflersa
+if %plays% == Yes  goto shufflersa 
+if %plays% == Yup  goto shufflersa 
+if %plays% == YUP  goto shufflersa 
+if %plays% == yup  goto shufflersa 
+if %plays% == y  goto shufflersa
+if %plays% == Y  goto shufflersa 
+if %plays% == no  goto exiter 
+if %plays% == No  goto exiter
+if %plays% == N  goto exiter
+if %plays% == n goto exiter
+if not %plays% == yes  goto dialogerror 
+if not %plays% == Yes  goto dialogerror 
+if not %plays% == Yup  goto dialogerror 
+if not %plays% == YUP  goto dialogerror 
+if not %plays% == yup  goto dialogerror 
+if not %plays% == y  goto dialogerror
+if not %plays% == Y  goto dialogerror 
+if not %plays% == no  goto dialogerror 
+if not %plays% == No  goto dialogerror
+if not %plays% == N  goto dialogerror
+if not %plays% == n goto dialogerror  
 
 :shufflersa
-set /a shuffleb= %random% %%5
+set /a shuffleb=%random% %%5
 if %shuffleb% == 0 goto hel
 if %shuffleb% == 1 goto hela 
 if %shuffleb% == 2 goto helb
@@ -53,22 +53,22 @@ if %shuffleb% =ha= 3 goto helc
 
 :hel
 ( set compgreet=hello)
-goto shufflesb
+goto play
 
 :hela
 ( set compgreet=hi)
-goto shufflesb
+goto play
 
 :helb
 ( set compgreet=whatsup)
-goto shufflesb
+goto play
 
 :helc
 ( set compgreet=yo)
-goto shufflesb
+goto play
 
-:shufflesb
-set /a shufflea= %random% %%5
+:shufflersb
+set /a shufflea=%random% %%5
 if %shufflea% == 0 goto sit
 if %shufflea% == 1 goto sita
 if %shufflea% == 2 goto sitb
@@ -90,7 +90,7 @@ goto chat
 ( set situationcomp=neverchanged)
 goto chat
 
-: play                                                                              ::asks name of the player for auth
+:play                                                                              ::asks name of the player for auth
 cls
 del temp.vbs
 echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
@@ -124,13 +124,13 @@ echo c) Exam preparation test
 set gamemode=administrator
 set /p adminchoices=
 
-if %adminchoices% == a goto shufflersa
-if %adminchoices% == one goto shufflersa
-if %adminchoices% == One goto shufflersa
-if %adminchoices% == ONE goto shufflersa
-if %adminchoices% == chat goto shufflersa
-if %adminchoices% == Chat goto shufflersa
-if %adminchoices% == CHAT goto shufflersa
+if %adminchoices% == a goto shufflersb
+if %adminchoices% == one goto shufflersb
+if %adminchoices% == One goto shufflersb
+if %adminchoices% == ONE goto shufflersb
+if %adminchoices% == chat goto shufflersb
+if %adminchoices% == Chat goto shufflersb
+if %adminchoices% == CHAT goto shufflersb
 if %adminchoices% == b goto trivia
 if %adminchoices% == two goto trivia
 if %adminchoices% == Two goto trivia
@@ -148,7 +148,7 @@ if %adminchoices% == EXAMPREP goto examprep
 if %adminchoices% == exampreparationquiz goto examprep
 if %adminchoices% == Exampreparationquiz goto examprep
 if %adminchoices% == ExamPreparation Quiz) goto examprep
-if %adminchoices% == EXAMPREPARATION QUIZ) goto examprep
+if %adminchoices% == EXAMPREPARATION QUIZ) goto Examprep
 if not %adminchoices% == a goto dialogerror
 if not %adminchoices% == one goto dialogerror
 if not %adminchoices% == One goto dialogerror
@@ -174,7 +174,6 @@ if not %adminchoices% == exampreparationquiz goto dialogerror
 if not %adminchoices% == Exampreparationquiz goto dialogerror
 if not %adminchoices% == ExamPreparationQuiz goto chat
 if not %adminchoices% == EXAMPREPARATIONQUIZ goto dialogerror
-
 
 :trivia                                                                            ::yet to be implemented
 cls
